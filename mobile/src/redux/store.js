@@ -1,16 +1,8 @@
-import {configureStore} from '@reduxjs/toolkit'
-import postsReducer from './slices/postsSlice'
-import selectedPostReducer from './slices/selectedPostSlice'
-import modalReducer from './slices/modalSlice'
-import userReducer from './slices/userSlice'
+import { configureStore } from '@reduxjs/toolkit'
+import songReducer from './songSlice'
 
-const store = configureStore({
+export const store = configureStore({
   reducer: {
-    modal: modalReducer,
-    posts: postsReducer,
-    selectedPost: selectedPostReducer,
-    user: userReducer
-  }
+    song: songReducer
+  },
 })
-
-export default store
